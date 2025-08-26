@@ -1,0 +1,6 @@
+openai>=1.30.0
+langgraph>=0.1.0
+streamlit>=1.31.0
+
+# Optional: for red_team.py (commented by default)
+# deepteam
