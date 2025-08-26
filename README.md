@@ -8,18 +8,18 @@
    ```bash
    pip install -r requirements.txt
 
-3. Running the Application
-   
-     a.) Streamlit Web Interface
+### Running the Application
 
-   ```bash
-      streamlit run chatUI.py
+#### Streamlit Web Interface
+```bash
+streamlit run chatUI.py
+```
 
- 
-      b.) Command Line Interface
-   ```bash
-      python main.py
-   '''
+#### Command Line Interface
+```bash
+python main.py
+```
+
 
 <img width="371" height="651" alt="Screenshot 2025-08-26 at 5 57 55 PM" src="https://github.com/user-attachments/assets/957ddb99-887b-459f-af89-c9e21c3d2afa" />
 
