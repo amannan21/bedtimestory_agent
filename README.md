@@ -1,50 +1,30 @@
-# Hippocratic AI Coding Assignment
-Welcome to the [Hippocratic AI](https://www.hippocraticai.com) coding assignment
+### Instructions to run:
 
-## Instructions
-The attached code is a simple python script skeleton. Your goal is to take any simple bedtime story request and use prompting to tell a story appropriate for ages 5 to 10.
-- Incorporate a LLM judge to improve the quality of the story
-- Provide a block diagram of the system you create that illustrates the flow of the prompts and the interaction between judge, storyteller, user, and any other components you add
-- Do not change the openAI model that is being used. 
-- Please use your own openAI key, but do not include it in your final submission.
-- Otherwise, you may change any code you like or add any files
+1.) input openai API key
 
----
+2.) pip install -r requirements.txt
 
-## Rules
-- This assignment is open-ended
-- You may use any resources you like with the following restrictions
-   - They must be resources that would be available to you if you worked here (so no other humans, no closed AIs, no unlicensed code, etc.)
-   - Allowed resources include but not limited to Stack overflow, random blogs, chatGPT et al
-   - You have to be able to explain how the code works, even if chatGPT wrote it
-- DO NOT PUSH THE API KEY TO GITHUB. OpenAI will automatically delete it
+3.) 
 
----
+Run usiing streamlit:
 
-## What does "tell a story" mean?
-It should be appropriate for ages 5-10. Other than that it's up to you. Here are some ideas to help get the brain-juices flowing!
-- Use story arcs to tell better stories
-- Allow the user to provide feedback or request changes
-- Categorize the request and use a tailored generation strategy for each category
+bsh: streamlit run [chatUI.py](http://chatui.py/)
 
----
+Run using CLI: 
 
-## How will I be evaluated
-Good question. We want to know the following:
-- The efficacy of the system you design to create a good story
-- Are you comfortable using and writing a python script
-- What kinds of prompting strategies and agent design strategies do you use
-- Are the stories your tool creates good?
-- Can you understand and deconstruct a problem
-- Can you operate in an open-ended environment
-- Can you surprise us
+python [main.py](http://main.py)
 
----
 
-## Other FAQs
-- How long should I spend on this? 
-No more than 2-3 hours
-- Can I change what the input is? 
-Sure
-- How long should the story be?
-You decide
+Flow Chart:
+<img width="371" height="651" alt="Screenshot 2025-08-26 at 5 57 55 PM" src="https://github.com/user-attachments/assets/957ddb99-887b-459f-af89-c9e21c3d2afa" />
+
+
+
+
+**Before submitting the assignment, describe here in a few sentences what you would have built next if you spent 2 more hours on this project:**   
+
+If I had more time, I would have the similar system but I would have the explored diverse candidates at the story generation phase (for instance, pick 6 or so candidates with different temperatures and slightly different seeding instructions). Then I would have created one of these: 1. a new pairwise LLM Judge in charge of picking the best one of those candidates 2. Panel of LLm evaluators (as outlined here https://arxiv.org/pdf/2404.18796) 3.a compiler agent to take the best parts of each story and compile them into one (would have tested to determine which was better fit). The issue with relying on a solely single output judge is that scores drift, calibration can be fragile, and it can be gamed more easily by verbosity or keyword stuffing than a pairwise judge.
+
+Alternatively, I would have also explored decoupling the revise agent into a few different agents (example: rhyme polisher, parental-controls, etc.) instead of just the single reviser model.
+
+Over a longer period of 2 hours I would’ve also tried implementing automatic red-teaming using deepeval library for robustness.
