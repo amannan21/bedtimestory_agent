@@ -15,7 +15,7 @@
    ```bash
       streamlit run chatUI.py
 
-  '''
+ 
       b.) Command Line Interface
    ```bash
       python main.py
