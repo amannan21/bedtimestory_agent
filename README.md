@@ -1,21 +1,22 @@
-### Instructions to run:
+## Setup Instructions
 
-1.) input openai API key
+### Prerequisites
+1. **OpenAI API Key Configuration**
+   - Input your OpenAI API key when prompted
 
-2.) pip install -r requirements.txt
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
 
-3.) 
-
-Run usiing streamlit:
-
-bsh: streamlit run [chatUI.py](http://chatui.py/)
-
-Run using CLI: 
-
-python [main.py](http://main.py)
+3. Running the Application
+   
+  a.) Streamlit Web Interface
+  bashstreamlit run chatUI.py
+  
+  b.) Command Line Interface
+  bashpython main.py
 
 
-Flow Chart:
 <img width="371" height="651" alt="Screenshot 2025-08-26 at 5 57 55 PM" src="https://github.com/user-attachments/assets/957ddb99-887b-459f-af89-c9e21c3d2afa" />
 
 
